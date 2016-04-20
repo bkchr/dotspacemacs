@@ -254,6 +254,19 @@ you should place you code here."
 
   (load-file "~/.spacemacs.d/latex.el")
   (load-file "~/.spacemacs.d/org.el")
+
+  (with-eval-after-load 'org
+    (org-babel-do-load-languages
+     'org-babel-load-languages
+     '(
+       (sh . t)
+       (python . t)
+       (octave . t)
+       (sqlite . t)
+       (perl . t)
+       (C . t)
+       ))
+    )
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
