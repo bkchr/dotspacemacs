@@ -28,7 +28,7 @@ values."
      emacs-lisp
      git
      ;; markdown
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -36,6 +36,7 @@ values."
      syntax-checking
      ;; version-control
      latex
+     c-c++
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -251,18 +252,8 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
 
-  (setq TeX-source-correlate-mode t)
-  (setq TeX-source-correlate-start-server t)
-  (setq TeX-source-correlate-method 'synctex)
-  (setq TeX-view-program-list
-        '(("Okular" "okular --unique %o#src:%n%b")
-          ("Skim" "displayline -b -g %n %o %b")))
-
-  (cond
-   ((string-equal system-type "darwin")
-    (progn (setq TeX-view-program-selection '((output-pdf "Skim")))))
-   ((string-equal system-type "gnu/linux")
-    (progn (setq TeX-view-program-selection '((output-pdf "Okular"))))))
+  (load-file "~/.spacemacs.d/latex.el")
+  (load-file "~/.spacemacs.d/org.el")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -272,7 +263,10 @@ you should place you code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(magit-commit-arguments (quote ("--all"))))
+ '(magit-commit-arguments (quote ("--all")))
+ '(org-agenda-files
+   (quote
+    ("/home/bastian/projects/org/documents/cogadb.org" "/home/bastian/projects/org/documents/gtd.org" "/home/bastian/projects/org/documents/masterthesis.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
