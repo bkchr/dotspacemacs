@@ -81,11 +81,9 @@
                 (tags "flagged")
                 (agenda ""))))))
 
-(progn
-  (setq org-agenda-files (quote 
-                          ("~/projects/org/documents/"
-                           "~/projects/org/documents/journal/"
-                           "~/projects/org/documents/notes/"))))
+(setq org-agenda-files (quote("~/projects/org/documents/"
+                              "~/projects/org/documents/notes/"
+                              "~/projects/org/documents/journal/")))
 
 ;; Save clock data and notes in a separate drawer
 (setq org-clock-into-drawer "CLOCK")
@@ -138,3 +136,8 @@
      (C . t)
      ))
   )
+
+(setq org-refile-targets '((nil :maxlevel . 9)
+                           (org-agenda-files :maxlevel . 9)))
+(setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
+(setq org-refile-use-outline-path t)                  ; Show full paths for refiling

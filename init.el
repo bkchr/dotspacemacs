@@ -267,7 +267,7 @@ you should place you code here."
  '(magit-commit-arguments (quote ("--all")))
  '(org-agenda-files
    (quote
-    ("/home/bastian/projects/org/documents/cogadb.org" "/home/bastian/projects/org/documents/gtd.org" "/home/bastian/projects/org/documents/journal.org" "/home/bastian/projects/org/documents/masterthesis.org"))))
+    ("/home/bastian/projects/org/documents/cogadb.org" "/home/bastian/projects/org/documents/dima.org" "/home/bastian/projects/org/documents/gtd.org" "/home/bastian/projects/org/documents/masterthesis.org" "/home/bastian/projects/org/documents/papers.org" "/home/bastian/projects/org/documents/notes/opencl.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
