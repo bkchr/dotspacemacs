@@ -2,5 +2,3 @@
 (setq org-journal-file-format "%d-%m-%Y.org")
 
 (evil-leader/set-key "jj" 'org-journal-new-entry)
-
-(setq org-agenda-file-regexp "\\`[^.].*\\.org'\\|[0-9]+")
