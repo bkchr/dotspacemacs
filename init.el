@@ -42,7 +42,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(org-journal)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -254,19 +254,7 @@ you should place you code here."
 
   (load-file "~/.spacemacs.d/latex.el")
   (load-file "~/.spacemacs.d/org.el")
-
-  (with-eval-after-load 'org
-    (org-babel-do-load-languages
-     'org-babel-load-languages
-     '(
-       (sh . t)
-       (python . t)
-       (octave . t)
-       (sqlite . t)
-       (perl . t)
-       (C . t)
-       ))
-    )
+  (load-file "~/.spacemacs.d/org-journal.el")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

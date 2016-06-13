@@ -8,10 +8,8 @@
   (setq org-capture-templates
         '(("t" "Task" entry (file+headline "~/projects/org/documents/gtd.org" "Inbox")
            "* TODO %?")
-          ("z" "Track time in gtd.org" entry (file+headline "~/projects/org/documents/gtd.org" "Inbox")
-           "* ZKTO %? \n  %i" :clock-in t :clock-resume t)
-          ("j" "Journal" entry (file+datetree "~/projects/org/documents/journal.org")
-           "* %?\nEntered on %U\n  %i"))))
+          ("n" "note" entry (file org-default-notes-file) "* %? :NOTE:\n%U\n%a\n" "~/projects/org/documents/gtd.org" "Notes")
+          )))
 
 ;; Use IDO for target completion
 (setq org-completion-use-ido t)
@@ -86,6 +84,7 @@
 (progn
   (setq org-agenda-files (quote 
                           ("~/projects/org/documents/"
+                           "~/projects/org/documents/journal/"
                            "~/projects/org/documents/notes/"))))
 
 ;; Save clock data and notes in a separate drawer
@@ -126,3 +125,16 @@
 
 ;; Keine Links, maximal bis Level 4 herunter:
 (setq org-agenda-clockreport-parameter-plist (quote (:link t :maxlevel 4)))
+
+(with-eval-after-load 'org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '(
+     (sh . t)
+     (python . t)
+     (octave . t)
+     (sqlite . t)
+     (perl . t)
+     (C . t)
+     ))
+  )
