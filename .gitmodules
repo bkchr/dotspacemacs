@@ -1,0 +1,3 @@
+[submodule "plugins/writegood-mode"]
+	path = plugins/writegood-mode
+	url = git@github.com:bnbeckwith/writegood-mode.git
