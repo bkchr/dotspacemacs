@@ -4,6 +4,8 @@
 ;; enter follows links
 (setq org-return-follows-link t)
 
+(setq org-directory "~/projects/org/")
+
 (progn
   (setq org-capture-templates
         '(("t" "Task" entry (file+headline "~/projects/org/documents/gtd.org" "Inbox")

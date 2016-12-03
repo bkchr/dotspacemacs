@@ -262,6 +262,7 @@ you should place you code here."
   (load-file "~/.spacemacs.d/org.el")
   (load-file "~/.spacemacs.d/org-journal.el")
   (load-file "~/.spacemacs.d/cpp.el")
+  (load-file "~/.spacemacs.d/grammar.el")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
