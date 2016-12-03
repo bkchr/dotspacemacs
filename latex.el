@@ -2,7 +2,7 @@
 (setq TeX-source-correlate-start-server t)
 (setq TeX-source-correlate-method 'synctex)
 (setq TeX-view-program-list
-      '(("Okular" "okular --unique %o#src:%n%b")
+      '(("Okular" "okular --unique %o")
         ("Skim" "displayline -b -g %n %o %b")))
 
 (cond
