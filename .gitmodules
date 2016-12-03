@@ -1,3 +1,6 @@
 [submodule "plugins/writegood-mode"]
 	path = plugins/writegood-mode
 	url = git@github.com:bnbeckwith/writegood-mode.git
+[submodule "layer/spacemacs-cmake-ide"]
+	path = layer/spacemacs-cmake-ide
+	url = git@github.com:bkchr/spacemacs-cmake-ide.git
