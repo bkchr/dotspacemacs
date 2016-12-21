@@ -2,15 +2,16 @@
 ;;; http://stackoverflow.com/a/663636/1531656
 ;;; http://stackoverflow.com/a/22711444/1531656
 (defun my-c++-c-mode-hook ()
-  (setq c-basic-offset 2)
-  (setq indent-tabs-mode nil)
+  (google-set-c-style)
   (if (string-suffix-p "hpp" buffer-file-name)
       (progn (c-set-offset 'innamespace 2))
-      (progn (c-set-offset 'innamespace 0)))
-  (c-set-offset 'substatement-open 0))
+      (progn (c-set-offset 'innamespace 0))))
+
+;;(dolist (mode '(c-mode-hook c++-mode-hook))
+;;  (add-hook mode 'google-set-c-style))
 
 (dolist (mode '(c-mode-hook c++-mode-hook))
-  (add-hook mode 'google-set-c-style))
+  (add-hook mode 'my-c++-c-mode-hook))
 
 (dolist (mode '(c-mode-hook c++-mode-hook))
   (add-hook mode 'google-make-newline-indent))
