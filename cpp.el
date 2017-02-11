@@ -19,8 +19,8 @@
 (add-to-list 'auto-mode-alist '("\\.cl\\'" . c-mode))
 
 (setq company-idle-delay 0)
-(define-key c-mode-map [(tab)] 'company-complete)
-(define-key c++-mode-map [(tab)] 'company-complete)
+;(define-key c-mode-map [(tab)] 'company-complete)
+;(define-key c++-mode-map [(tab)] 'company-complete)
 
 (require 'semantic/bovine/gcc)
 (setq cmake-ide-flags-c++ (append '("-std=c++11")
@@ -46,3 +46,12 @@
 (require 'stickyfunc-enhance)
 (dolist (mode '(c-mode-hook c++-mode-hook))
   (add-hook mode 'spacemacs/lazy-load-stickyfunc-enhance))
+
+(setq ycmd-server-command '("python" "/home/bastian/projects/ycmd/ycmd"))
+
+(setq ycmd-extra-conf-whitelist '("~/projects/*"))
+(setq ycmd-force-semantic-completion t)
+
+(add-to-list 'ycmd-parse-conditions 'new-line)
+
+(add-hook 'c++-mode-hook 'ycmd-mode)
