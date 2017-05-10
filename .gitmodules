@@ -2,7 +2,7 @@
 	path = plugins/writegood-mode
 	url = git@github.com:bnbeckwith/writegood-mode.git
 [submodule "layer/spacemacs-cmake-ide"]
-	path = layer/spacemacs-cmake-ide
+	path = layers/spacemacs-cmake-ide
 	url = git@github.com:bkchr/spacemacs-cmake-ide.git
 [submodule "plugins/rust-snippets"]
 	path = plugins/rust-snippets
